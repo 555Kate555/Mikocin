@@ -1,0 +1,155 @@
+$caseColorBold: #383334;
+$caseLineBg: #becbd8;
+$caseTextColor: #444444;
+
+.case {
+  margin-bottom: 70px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__header {
+    font-family: 'Roboto-Black', sans-serif;
+    font-size: 48px;
+    text-align: center;
+    color: $caseColorBold;
+    margin: 31px 0 43px;
+    font-weight: 900;
+    line-height: 43px;
+  }
+
+  &__subtitle {
+    font-family: 'Roboto-Black', sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: $caseColorBold;
+    margin-bottom: 0px;
+
+  }
+
+  &__item {
+    position: relative;
+    margin-top: 26px;
+
+    &-inner {
+      display: flex;
+    }
+
+    &-img {
+      object-fit: cover;
+      width: 169px;
+      height: 169px;
+      border-radius: 50%;
+      margin: 20px;
+
+      &--main {
+        position: relative;
+      }
+    }
+
+    &-arc {
+      position: absolute;
+    }
+
+    &-text {
+      &--aside {
+        font-family: 'Roboto-Medium', sans-serif;
+        font-size: 22px;
+        line-height: 26px;
+        color: $caseColorBold;
+        font-weight: 900;
+        padding-top: 27px;
+      }
+
+      &--middle {
+        width: 180px;
+      }
+
+
+    }
+
+    &-line {
+      display: inline-block;
+      height: 3px;
+      width: 50px;
+      background-color: $caseLineBg;
+      border: none;
+      margin-top: 7px;
+    }
+
+    &-text {
+      font-size: 18px;
+      color: $caseTextColor;
+      line-height: 29px;
+      width: 316px;
+    }
+  }
+}
+
+@media(max-width: 1150px) {
+  .case {
+    &__wrapper {
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@media(max-width: 735px) {
+  .case {
+    &__wrapper {
+      display: block;
+    }
+
+    &__item {
+      position: relative;
+      width: 360px;
+      margin: 26px auto;
+    }
+  }
+}
+
+@media(max-width: 390px) {
+  .case {
+    &__item {
+      width: 100%;
+
+      &-inner {
+        display: block;
+      }
+
+      &-img--main {
+        width: 191px;
+        margin: 0 auto;
+      }
+
+      &-text--aside {
+        padding-top: 0;
+        width: 109px;
+        margin: 0 auto;
+      }
+
+      &-line {
+        margin-top: 18px;
+      }
+
+      &-text {
+        margin: 0 auto;
+        width: 100%;
+
+        &--middle {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+

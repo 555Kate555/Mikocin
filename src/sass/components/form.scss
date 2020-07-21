@@ -1,0 +1,193 @@
+$aboutFormBg: #ffffff;
+$aboutFormColorBorderBtm: #a8ca3f;
+$aboutFormImgBg: #f1f8fe;
+$aboutFormBtnBg: #ffc002;
+$aboutFormElementBg: #eef2f7;
+$aboutFormImgTextColor: #444444;
+$aboutFormTitleTopColor: #ff6b00;
+$aboutFormTextBottomColor: #9dbd39;
+$aboutFormPriceNewBg: #ffbf02;
+$aboutFormPlaceholderColor: #939596;
+$aboutFormFooterTextColor: #666666;
+$aboutFormCrossBg: #ea7845;
+$aboutFormPriceOldColor: #0b0b0b;
+$aboutFormTextLeftBottomColor: #333333;
+
+
+.about {
+  &-form {
+    position: relative;
+    margin: 45px 25px 0 20px;
+
+
+    &__img {
+      padding: 0 11px 8px 11px;
+      background-color: $aboutFormImgBg;
+      position: absolute;
+      right: 58px;
+      border-bottom: 7px solid $aboutFormColorBorderBtm;
+      border-right: 7px solid $aboutFormColorBorderBtm;
+      border-left: 7px solid $aboutFormColorBorderBtm;
+      border-radius: 8px;
+
+      &-text {
+        padding-left: 4px;
+        color: $aboutFormImgTextColor;
+      }
+    }
+
+    &-contact {
+      border: 7px solid $aboutFormColorBorderBtm;
+      border-radius: 8px;
+      background-color: $aboutFormBg;
+      max-width: 270px;
+
+      &__inner {
+        padding: 26px 20px 0 20px;
+      }
+    }
+
+    &__title {
+      &--inner {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      &--top {
+        color: $aboutFormTitleTopColor;
+      }
+
+    }
+
+    &__text {
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 14px;
+
+      &--left {
+        color: $aboutFormFooterTextColor;
+        margin-right: 14px;
+      }
+
+      &-span {
+        color: $aboutFormTextBottomColor;
+      }
+
+      &--bottom {
+        text-align: center;
+        font-size: 18px;
+        color: $aboutFormTextLeftBottomColor;
+        margin-bottom: 5px;
+      }
+    }
+
+    &__price {
+      display: flex;
+      justify-content: space-evenly;
+
+      &--old {
+        position: relative;
+        font-family: 'Roboto-Light', sans-serif;
+        font-size: 34px;
+        color: $aboutFormPriceOldColor;
+        margin-left: 14px;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 25%;
+          width: 100%;
+          height: 1px;
+          background-color: $aboutFormCrossBg;
+          transform: rotate(15deg);
+        }
+
+        &::after {
+          transform: rotate(-15deg);
+        }
+      }
+
+      &-currency {
+        font-size: 32px;
+      }
+
+      &--new {
+        font-family: 'Roboto-Black', sans-serif;
+        font-size: 34px;
+        font-weight: 900;
+        background-color: $aboutFormPriceNewBg;
+        padding: 8px 10px;
+        border-radius: 6px;
+        margin: -8px 0 15px 14px;
+      }
+    }
+
+    &__input {
+      padding: 0 54px;
+      height: 65px;
+      width: 219px;
+      border-radius: 32px;
+      outline: none;
+      background-color: $aboutFormElementBg;
+      border: none;
+
+      &::placeholder {
+        color: $aboutFormPlaceholderColor;
+      }
+
+      &-block {
+        position: relative;
+        margin-bottom: 12px;
+      }
+
+      &-img {
+        position: absolute;
+        left: 21px;
+        top: 20px;
+      }
+    }
+
+    &__btn {
+      box-shadow: 0 0 0 2px #ffd24e, 0 0 0 5px $aboutFormBtnBg;
+      background-color: $aboutFormBtnBg;
+      font-family: 'Roboto-Bold', sans-serif;
+      font-weight: 700;
+      width: 208px;
+      height: 60px;
+      margin: 9px 0 5px;
+      padding: 17px;
+      cursor: pointer;
+
+      &-name {
+        font-size: 28px;
+        line-height: 10px;
+      }
+    }
+
+    &__footer {
+      position: relative;
+      background-color: $aboutFormElementBg;
+
+      &-img {
+        position: absolute;
+        top: 11px;
+        left: 29px;
+      }
+
+      &-text {
+        font-size: 14px;
+        color: $aboutFormFooterTextColor;
+        padding: 12px 10px 12px 58px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__arrow {
+      position: absolute;
+      top: 189px;
+      left: 243px;
+    }
+  }
+}

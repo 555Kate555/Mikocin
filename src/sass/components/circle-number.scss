@@ -1,0 +1,68 @@
+$numberColor: #ffffff;
+$aboutNumberBg: #a7c93d;
+$caseNumberBackBg: #ec9a6a;
+$caseNumberFootBg: #e47643;
+$caseNumberHospitalBg: #ec5b19;
+
+%circle {
+  display: inline-block;
+  border-radius: 50%;
+  color: $numberColor;
+  text-align: center;
+  vertical-align: top;
+  padding: 10px 7px;
+}
+
+%circle__case {
+  @extend %circle;
+  width: 51px;
+  height: 51px;
+  font-size: 30px;
+  line-height: 27px;
+  z-index: 1;
+  position: absolute;
+  top: 11px;
+  left: 135px;
+}
+
+.about-advantages__item-number {
+  @extend %circle;
+  width: 59px;
+  height: 59px;
+  font-family: 'Roboto-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  background-color: $aboutNumberBg;
+  border: 6px solid #e8edc9;
+  margin: 0 14px 51px 0;
+
+}
+
+.case__number {
+  &-back {
+    @extend %circle__case;
+    background-color: $caseNumberBackBg;
+  }
+
+  &-foot {
+    @extend %circle__case;
+    background-color: $caseNumberFootBg;
+  }
+
+  &-hospital {
+    @extend %circle__case;
+    background-color: $caseNumberHospitalBg;
+  }
+}
+
+
+@media(max-width: 400px) {
+  .about-advantages__item-number {
+    width: 50px;
+    height: 50px;
+    font-size: 19px;
+    padding: 9px 3px;
+    margin: 0 8px 29px 0;
+    vertical-align: bottom;
+  }
+}

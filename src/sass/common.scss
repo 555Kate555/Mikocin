@@ -1,0 +1,51 @@
+$primaryColor: #000000;
+$primaryFontSize: 16px;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto-Regular', sans-serif;
+  color: $primaryColor;
+  font-size: $primaryFontSize;
+  line-height: 20px;
+}
+
+.wrapper {
+  background-image: url('../images/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 46%;;
+}
+
+.container {
+  max-width: 1286px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+@media(max-width: 1160px) {
+  .wrapper {
+    background-position: 54%;
+  }
+}
+
+@media(max-width: 900px) {
+  .wrapper {
+    background-position: 55%;
+  }
+}
+
+@media(max-width: 870px) {
+  .wrapper {
+    background-position: 62%;
+  }
+}

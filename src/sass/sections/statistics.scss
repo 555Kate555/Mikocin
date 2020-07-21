@@ -1,0 +1,28 @@
+$statisticsTextBorderColor: #f4d3bb;
+$statisticsImgBg: #ffffff;
+
+.statistics {
+  margin-bottom: 30px;
+
+  &__block {
+    position: relative;
+    border: 3px solid $statisticsTextBorderColor;
+    border-radius: 9px;
+  }
+
+  &__img {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    padding: 0 55px;
+    margin-left: -86px;
+    background-color: $statisticsImgBg;
+  }
+
+  &__text {
+    font-size: 22px;
+    text-align: center;
+    line-height: 28px;
+    margin: 40px 0 37px;
+  }
+}
