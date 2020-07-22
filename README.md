@@ -1,7 +1,7 @@
 # Mikocin
 
 
-1. You must have npm on your local machine. If you don't have it you must write command:         
+1. You must have npm on your local machine. If you don't have it you may write command in your terminal:         
 
     $ sudo npm install -g npm@latest    
 
